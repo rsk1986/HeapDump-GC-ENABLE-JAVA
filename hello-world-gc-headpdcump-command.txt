@@ -1,0 +1,19 @@
+https://github.com/macagua/example.java.helloworld
+
+sathish@sathish:~/Downloads/example.java.helloworld$ java -jar Main.jar
+Hello world
+
+
+sathish@sathish:~/Downloads/example.java.helloworld$ java -Xms128M -Xmx256M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/heapdump.bin -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps  -jar Main.jar 
+Hello world
+Heap
+ PSYoungGen      total 38400K, used 1331K [0x00000000fab00000, 0x00000000fd580000, 0x0000000100000000)
+  eden space 33280K, 4% used [0x00000000fab00000,0x00000000fac4ce48,0x00000000fcb80000)
+  from space 5120K, 0% used [0x00000000fd080000,0x00000000fd080000,0x00000000fd580000)
+  to   space 5120K, 0% used [0x00000000fcb80000,0x00000000fcb80000,0x00000000fd080000)
+ ParOldGen       total 87552K, used 0K [0x00000000f0000000, 0x00000000f5580000, 0x00000000fab00000)
+  object space 87552K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f5580000)
+ Metaspace       used 2829K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 295K, capacity 386K, committed 512K, reserved 1048576K
+
+# java -Xms128M -Xmx256M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/heapdump.bin -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps  -jar Main.jar

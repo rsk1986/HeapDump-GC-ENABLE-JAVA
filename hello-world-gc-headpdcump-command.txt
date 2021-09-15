@@ -17,3 +17,53 @@ Heap
   class space    used 295K, capacity 386K, committed 512K, reserved 1048576K
 
 # java -Xms128M -Xmx256M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/heapdump.bin -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps  -jar Main.jar
+
+
+========
+
+Sathish@sathish:~/Downloads/old/example.java.helloworld$ java -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/heapdump.bin -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps  -jar Main.jar
+Hello world
+Heap
+ PSYoungGen      total 35840K, used 1229K [0x00000000d8000000, 0x00000000da800000, 0x0000000100000000)
+  eden space 30720K, 4% used [0x00000000d8000000,0x00000000d81334b8,0x00000000d9e00000)
+  from space 5120K, 0% used [0x00000000da300000,0x00000000da300000,0x00000000da800000)
+  to   space 5120K, 0% used [0x00000000d9e00000,0x00000000d9e00000,0x00000000da300000)
+ ParOldGen       total 81920K, used 0K [0x0000000088000000, 0x000000008d000000, 0x00000000d8000000)
+  object space 81920K, 0% used [0x0000000088000000,0x0000000088000000,0x000000008d000000)
+ Metaspace       used 2829K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 295K, capacity 386K, committed 512K, reserved 1048576K
+
+
+athish@sathish:~/Downloads/old/example.java.helloworld$ java -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps  -jar Main.jar
+Hello world
+Heap
+ PSYoungGen      total 35840K, used 1229K [0x00000000d8000000, 0x00000000da800000, 0x0000000100000000)
+  eden space 30720K, 4% used [0x00000000d8000000,0x00000000d81334b8,0x00000000d9e00000)
+  from space 5120K, 0% used [0x00000000da300000,0x00000000da300000,0x00000000da800000)
+  to   space 5120K, 0% used [0x00000000d9e00000,0x00000000d9e00000,0x00000000da300000)
+ ParOldGen       total 81920K, used 0K [0x0000000088000000, 0x000000008d000000, 0x00000000d8000000)
+  object space 81920K, 0% used [0x0000000088000000,0x0000000088000000,0x000000008d000000)
+ Metaspace       used 2829K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 295K, capacity 386K, committed 512K, reserved 1048576K
+
+
+sathish@sathish:~/Downloads/old/example.java.helloworld$ java -XX:+PrintGC -XX:+PrintGCDetails   -jar Main.jar
+Hello world
+Heap
+ PSYoungGen      total 35840K, used 1229K [0x00000000d8000000, 0x00000000da800000, 0x0000000100000000)
+  eden space 30720K, 4% used [0x00000000d8000000,0x00000000d81334b8,0x00000000d9e00000)
+  from space 5120K, 0% used [0x00000000da300000,0x00000000da300000,0x00000000da800000)
+  to   space 5120K, 0% used [0x00000000d9e00000,0x00000000d9e00000,0x00000000da300000)
+ ParOldGen       total 81920K, used 0K [0x0000000088000000, 0x000000008d000000, 0x00000000d8000000)
+  object space 81920K, 0% used [0x0000000088000000,0x0000000088000000,0x000000008d000000)
+ Metaspace       used 2829K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 295K, capacity 386K, committed 512K, reserved 1048576K
+
+
+sathish@sathish:~/Downloads/old/example.java.helloworld$ java -XX:+PrintGC  -jar Main.jar
+Hello world
+
+sathish@sathish:~/Downloads/old/example.java.helloworld$ java -jar Main.jar
+Hello world
+
+
